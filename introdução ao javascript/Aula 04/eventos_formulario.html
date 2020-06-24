@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+	<html>
+	
+	<head>
+	
+		<title>
+			Eventos - formulario
+		</title>
+		<meta charset="utf-8">
+
+		<script type="text/javascript">
+			
+			
+		</script>
+					
+	</head>
+	
+	<body>
+
+		<div id="box">	
+
+			<h1>Tipos de eventos:</h1>
+			<ul>
+				<li>onfocus</li>
+				<p>Aciona quando o elemento recebe o foco do cursor.</p>
+				<input type="text" onfocus="alert('Focoooooou!')" name="onfocus">
+				
+				
+				<li>onblur</li>
+				<p>Aciona quando o elemento perde o foco do cursor.</p>
+				<input type="text" onblur="alert('Desfocou...')" name="onblur">
+				
+				<li>onchange</li>
+				<p>Aciona quando o estado do elemento émodificado.</p>
+				<input type="text" onchange="alert('Mudou!!!')" name="onchange">
+				<p>ou...</p>
+				<select onchange="alert('Frescura, ja mudou de novo?')">
+					<option value="1">Treta 1</option>
+					<option value="2">Treta 2</option>
+				</select>
+				
+				
+				
+			</ul>
+		</div>
+
+	</body>
+
+</html>

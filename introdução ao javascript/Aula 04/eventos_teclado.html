@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<html>
+	
+	<head>
+	
+		<title>Eventos - teclas</title>
+		<meta charset="utf-8">
+
+		<script type="text/javascript">
+			
+			
+		</script>
+					
+	</head>
+	
+	<body>
+
+		<div id="box">	
+
+			<h1>Tipos de eventos:</h1>
+			<ul>
+				<li>onkeydown</li>
+				<p>Aciona no momento em que a tecla é pressionada (soltando ou não, a tecla)</p>
+				<input onkeydown="alert('onkeydown')" type="text" name="onkeydown"  />
+				
+				<li>onkeypress</li>
+				<p>Aciona no momento em que a tecla é pressionada (soltando ou não, a tecla), mas captura apenas um grupo de teclas (excluindo teclas como alt, cntrl, esc, shift).</p>
+				<input  type="text" name="onkeypress" onkeypress="alert('onkeypress') " />
+				
+				<li>onkeyup</li>
+				<p>Aciona no momento em que a tecla é liberada. </p>
+				<input type="text"  name="onkeyup" onkeyup="alert('onkeyup')" />
+				
+				
+			</ul>
+		</div>
+
+	</body>
+
+</html>
