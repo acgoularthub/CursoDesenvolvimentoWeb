@@ -53,7 +53,9 @@ function contagem_tempo(segundos){
 }
 
 function game_over(){
-	alert('Fim de jogo.')
+	remove_eventos_baloes();
+	alert('Fim de jogo.');
+	parar_jogo();
 }
 
 function criaBaloes(qtdBaloes){
@@ -74,11 +76,22 @@ function criaBaloes(qtdBaloes){
 
 }
 
+function remove_eventos_baloes() {
+    var i = 1; //contado para recuperar balões por id
+        
+    //percorre o lementos de acordo com o id e só irá sair do laço quando não houver correspondência com elemento
+    while(document.getElementById('b'+i)) {
+        //retira o evento onclick do elemnto
+        document.getElementById('b'+i).onclick = '';
+        i++; //faz a iteração da variávei i
+    }
+}
+
 function estourar(e){
 
 	var id_balao = e.id;
 
-	document.getElementById(id_balao).setAttribute("onclick", "")
+	document.getElementById(id_balao).setAttribute("onclick", "");
 	document.getElementById(id_balao).src = 'imagens/balao_azul_pequeno_estourado.png';
 
 	pontuacao(-1)
@@ -109,6 +122,8 @@ function situacao_jogo(baloes_inteiros){
 		parar_jogo();
 
 	}
+
+
 
 }
 
