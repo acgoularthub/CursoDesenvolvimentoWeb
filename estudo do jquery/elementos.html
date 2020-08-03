@@ -32,6 +32,14 @@
 				$('.'+classe).hide();
 			}
 
+			function exibeElementoPorId(id){
+				$('#'+id).show();
+			}
+
+			function ocultaElementoPorId(id){
+				$('#'+id).hide();
+			}
+
 		</script>
 	</head>
 
@@ -62,14 +70,14 @@
 					<p class="bg-success">Este é outro parágrafo</p>
 				</div>
 
-				<div class="col-md-4">
+				<div class="div2 col-md-4">
 					<div style="height: 100px; width: 100px; background:#428bca;" class="pull-left"></div>
 					<div style="height: 100px; width: 100px; background:#5cb85c; margin-left:15px" class="pull-left"></div>
 				</div>
 
-				<div class="col-md-4">
-					<input type="text" class="form-control" />
-					<input type="text" class="form-control" />
+				<div class="div2 col-md-4">
+					<input type="text" id="campo1" class="form-control" placeholder="Por id" />
+					<input type="text" id="campo2" class="form-control" placeholder="Por id" />
 				</div>
 			</div>
 
@@ -82,13 +90,26 @@
 				</div>
 
 				<div class="col-md-4">
-					<button type="button" class="btn btn-danger">Esconder divs</button>
-					<button type="button" class="btn btn-success">Exibir divs</button>
+					<button type="button" class="btn btn-danger" onclick="ocultaElementoPorClasse('div2')">Esconder divs</button>
+					<button type="button" class="btn btn-success" onclick="exibeElementoPorClasse('div2')">Exibir divs</button>
 				</div>
 
 				<div class="col-md-4">
-					<button type="button" class="btn btn-danger">Esconder inputs</button>
-					<button type="button" class="btn btn-success">Exibir inputs</button>
+					<button 
+						type="button" 
+						onclick="ocultaElementoPorId('campo1'); 
+								 ocultaElementoPorId('campo2')" 
+						class="btn btn-danger">
+						Esconder inputs
+					</button>
+					
+					<button 
+						type="button" 
+						onclick="exibeElementoPorId('campo1'); 
+								 exibeElementoPorId('campo2')" 
+						class="btn btn-success">
+						Exibir inputs
+					</button>
 				</div>
 
 			</div>

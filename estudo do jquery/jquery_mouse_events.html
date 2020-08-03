@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Mouse events</title>
+		
+		<meta charset="utf-8">
+		
+		<!-- bootstrap - link cdn -->
+		<link 
+			rel="stylesheet" 
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+			integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+			crossorigin="anonymous">
+
+		<!-- jquery -->
+		<script
+			  src="https://code.jquery.com/jquery-3.5.1.js"
+			  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			  crossorigin="anonymous">
+			  	
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(
+				function(){
+					//o # identifica o id, o . identifica classes
+					//funções p/mouse: click, dblclick, mousedown, mouseover, mouseout. as mesmas do bootstrap
+					$('#div1').click(
+						function(){
+							alert('Elemento clicado.')
+						});
+				});
+
+		</script>
+	</head>
+
+	<body>
+
+		<div 
+			id="div1" 
+			style="height: 150px;
+			width: 150px;
+			background: #ccc">
+			
+		</div>
+
+	</body>
+
+</html>
